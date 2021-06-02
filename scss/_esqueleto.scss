@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $base_Font;
+} 
+
+html {
+  height: $percent_full;
+}
+
+body {
+  // padding: $font_zise1;
+  font-family: $base_Font;
+  min-height: $percent_full;
+}
+
+img {
+  width: 300px;
+    height: auto;
+    // border: 5vh solid $color_opacity2;
+    border-style: outset;
+    transition: 1.0s;
+}
+
+@mixin caja-flex($direction,$wrap,$justify){
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+}
+
+
+.main__buttons {
+  display: inline-block;
+  text-decoration: none;
+  color: $color_se;
+  background-color: $color_pr;
+  border-radius: $px_20;
+  margin: $px_10 0 $px_50 0;
+  padding: $px_10;
+}
+
+// titulos y subtitulos
+
+h1 {
+  @extend %formato-encabezado;
+  width: 100%;
+  position:relative;
+  text-align: center;
+  font-size: $font_zise1;
+  padding: 100px 0 0 0px !important;
+
+  // background-color: $color_se;
+  color: $color_se;
+  text-shadow: 2px 2px 2px $color_b;
+  z-index: 665;
+}
+
+h2 {
+  @extend %formato-encabezado;
+  padding: $px_10 0 $px_10 0;
+  text-align: center;
+  color: map-get($redscale, 200);
+  text-shadow: 2px 2px 2px $color_b;
+  font-size: 1.8;
+}
+
+h3 {
+  @extend %formato-encabezado;
+  margin-bottom: $font_zise1;
+  font-style: oblique;
+  font-size: $font_zise3;
+  padding-top: $px_20;
+}
+
+h4 {
+  @extend %formato-encabezado;
+  margin-bottom: $px_50;
+  text-shadow:initial;
+  color: map-get($redscale, "100");
+}
+
+p {
+  @extend %formato-encabezado;
+  color: $color_te;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: $color_te;
+}

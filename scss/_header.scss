@@ -1,0 +1,62 @@
+.header {
+    grid-area: header;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: justify;
+    overflow: hidden;
+
+    .navbar {
+        grid-area: navbar;
+        position:fixed !important;
+        background:
+            $gradient;
+        background-blend-mode: screen;
+        padding: 0 $px_50 0 0;
+        z-index: 669;
+        margin: -10px -10px 0 -10px;
+
+        .my_toggler {
+            background-color: $color_pr;
+            
+        }
+
+        .header__logo {
+            width: 8%;
+            border: 5px solid map-get($redscale, "600");
+            border-radius: $percent_50;
+            position: static;
+            float: left;
+        }
+        
+        li {
+            list-style: none;
+            margin-left: $px_20;
+
+            a {
+                border: solid 3px rgb(255, 217, 0);
+                border-radius: $px_10;
+                background-color: rgb(251, 7, 7);
+                text-decoration: none;
+                font-style: oblique;
+                color: $color_se;
+                font-size: 1rem;
+                cursor: pointer;
+                margin: $px_10;
+                z-index: 1;
+                position: relative;
+
+                &:hover {
+                    background-color: $color_se;
+                }
+            }
+        }
+    }
+    .carousel__my {
+        position: relative;
+    }
+}
+.navbar-toggler {
+    background-color: $color_pr !important;
+    
+}

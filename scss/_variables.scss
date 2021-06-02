@@ -1,0 +1,88 @@
+// font Variables
+$base_Font:'Roboto Slab', serif,'Josefin Sans', sans-serif;
+$font_zise1: 1rem ;
+$font_zise2:1.8rem;
+$font_zise3: 1.9rem;
+$color_pr: red;
+$color_se: yellow;
+$color_te: white;
+$color_b:black;
+
+// Color Variables
+$color_opacity1: rgb(255, 0, 0),transparent;
+$color_opacity2: rgb(136, 50, 0),transparent;
+$color_opacity3: rgb(255, 104, 3),transparent;
+$color_opacity4: rgb(255, 104, 3),transparent;
+$gradient:  linear-gradient(rgb(0, 0, 0),transparent),
+            linear-gradient(90deg,rgb(185, 68, 0),transparent),
+            linear-gradient(-90deg,rgb(160, 0, 0),transparent);
+$gradient2:  linear-gradient(rgb(177, 2, 2),transparent),
+            linear-gradient(90deg,rgb(136, 50, 0),transparent),
+            linear-gradient(-90deg,rgb(153, 31, 1),transparent);
+$gradient3:  linear-gradient(rgba(255, 0, 0, 0.685),transparent),
+linear-gradient(90deg,rgb(182, 127, 40),transparent),
+linear-gradient(-90deg,rgb(156, 154, 0),transparent);
+
+// Size Variables
+
+$percent_30:30%;
+$percent_50:50%;
+$percent_70:70%;
+$percent_full:100%;
+
+$px_10:10px;
+$px_20:20px;
+$px_30:30px;
+$px_50:50px;
+
+%formato-id {
+    padding: $px_50 0 $px_50 0;
+    text-shadow: 2px 2px 2px $color_b;
+  }
+
+%formato-encabezado {
+    color: $color_pr;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px $color_b;
+  }
+
+// MAPS........................
+  $redscale:(
+      "100": #ffee00,
+      "200": #6de200,
+      "300": #00ffff,
+      "400": #c20000,
+      "500": #9c0000,
+      "600": #7e0000,
+      "700": #5f0000,
+      "800": #3f0000,
+      "900": #330000
+);
+
+// EACH.........................
+$values:(
+  $color_pr: red,
+$color_se: yellow,
+$color_te: white,
+$color_b:black
+);
+
+@each $key,$value in $values{
+    .title-#{$key}{
+        background-color: #{$value};
+    }
+}
+
+// BUCLE..................
+@function isMultiple10($i){   
+  @return ($i % 10 == 0);   
+}
+@for $i from 10 through 100{  
+  @if(isMultiple10($i)){    
+      .spacer-#{$i}{        
+          border: 0px + $i solid; 
+      }
+  }
+}
+        

@@ -1,0 +1,196 @@
+/* Codigo del Formulario */
+
+
+@media (min-width: 700px) {
+  .wrapper {
+    overflow: hidden;
+  }
+
+  .wrapper>* {
+    float: left;
+    padding: 2em 2em;
+  }
+}
+
+@media (min-width: 700px) {
+  .contacts {
+    width: $percent_30;
+    min-height: 620px;
+    height: 943px;
+  }
+}
+
+@media (min-width: 700px) {
+  .form {
+    width: $percent_70;
+  }
+}
+
+
+
+form p {
+  float: left;
+  width: $percent_50;
+
+  form p:not(:nth-child(2n)) {
+    margin-right: 2%;
+
+    form p:last-child {
+      clear: both;
+      width: $percent_full;
+
+      form p:nth-last-child(2) {
+        clear: both;
+        width: $percent_full;
+      }
+
+    }
+  }
+}
+
+
+.contain {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+
+  .contacts {
+    background: $color_pr;
+    height: 1088px;
+    color: $color_te;
+
+    .contactsYou {
+      color: $color_te;
+
+      h3,
+      ul {
+        margin: 0;
+
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+        }
+      }
+    }
+
+    .wrapper>* {
+      padding: 1em;
+
+      .wrapper {
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+
+      }
+    }
+  }
+
+}
+
+.form {
+  background: $color_te;
+
+  form label {
+    display: block;
+
+    button,
+    input,
+    textarea {
+      padding: 1em;
+
+    }
+
+    button {
+      background: lightgrey;
+      width: $percent_full;
+      border: 0;
+
+
+
+    }
+
+    &:hover,
+    &:focus {
+      background: $color_se;
+      outline: 0;
+    }
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: 3px solid $color_se;
+  }
+
+  input,
+  textarea,
+  button {
+    width: $percent_full;
+    border: 1px solid #000;
+  }
+}
+
+/* grid tabla */
+
+.cont {
+  width: $percent_full;
+  max-width: 1000px;
+  margin: auto;
+  
+
+  .table {
+    width: $percent_full;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+    color: $color_te;
+    
+
+    tr {
+      background-color:chocolate;
+      border: 1px solid rgb(0, 217, 255);
+       
+      thead {
+        th {
+          font-size: 16px;
+          padding: 8px;
+          text-align: center;
+          text-transform: uppercase;
+       
+
+        &:hover {
+          background-color: $color_b;
+        }
+        }
+      }
+      td {
+        font-size: 16px;
+        padding: 8px;
+        text-align: center;
+
+        &:hover {
+          background-color: $color_b;
+        }
+         &:last-child {
+          border-bottom: 0px;
+        }
+      
+        &::before {
+          content: attr(data-label);
+          font-weight: bold;
+          text-transform: uppercase;
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  video {
+    width: 300px;
+  } 
+}

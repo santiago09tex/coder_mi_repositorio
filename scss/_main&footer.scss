@@ -1,0 +1,69 @@
+.main {
+    grid-area: main;
+    background:
+        $gradient3;
+    background-blend-mode: screen;
+
+    .main__Varios {
+        @include caja-flex (row, wrap, space-evenly);
+
+        .main__Borde {
+            background-color: black;
+            border-color: transparent;
+            animation: pulse 15s infinite;
+            animation-direction: alternate-reverse;
+
+            @keyframes pulse {
+                0% {
+                    background-color: $color_te;
+                }
+
+                100% {
+                    background-color: $color_pr;
+                }
+            }
+            
+        }
+        
+    }
+
+    .main_img {
+        width: 50%;
+    }
+
+    .main__subcripcion {
+        padding-left: $percent_30;
+        width: $percent_70;
+    }
+
+    .productos {
+        ul{ display: flex; 
+            justify-content: space-evenly;
+        li {
+            list-style: none;
+            flex-direction: column;
+            
+            a {
+                align-items: center;
+                text-decoration: none;
+                font-style: oblique;
+                font-size: $font_zise1;
+                cursor: pointer;
+                position: relative;
+            }
+        }
+    }
+    }
+    
+    #main__vacunos #main__aves #main__cerdo #main__embutidos{
+        @extend %formato-id
+    }
+
+}
+
+.footer {
+    grid-area: footer;
+    background:
+          $gradient2;
+      background-blend-mode: screen;
+  }
